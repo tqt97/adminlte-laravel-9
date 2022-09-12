@@ -1,4 +1,18 @@
-@import '../../node_modules/bootstrap';
-@import '../../node_modules/admin-lte/dist/css/adminlte.css';
-@import '@fortawesome/fontawesome-free/css/all.css';
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback');
+@import "../../node_modules/bootstrap";
+@import "../../node_modules/admin-lte/dist/css/adminlte.css";
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback");
+
+.logo-laravel {
+    width: 54px;
+    height: 54px;
+    color: red;
+    fill: currentColor;
+    float: left;
+    line-height: 0.8;
+    /* margin-left: 0.8rem; */
+    /* margin-right: 0.5rem; */
+    /* margin-top: -3px; */
+    /* max-height: 33px; */
+    width: auto;
+}

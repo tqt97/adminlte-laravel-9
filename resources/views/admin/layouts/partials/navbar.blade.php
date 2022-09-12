@@ -5,10 +5,10 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{ route('admin.dashboard') }}" class="nav-link">Home</a>
+            <a href="{{ route('admin.dashboard') }}" class="nav-link">{{ __('Home') }}</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="https://github.com/tqt97" class="nav-link" target="blank" title="Contact to admin">Contact</a>
+            <a href="https://github.com/tqt97" class="nav-link" target="blank" title="Contact to admin">{{ __('Contact') }}</a>
         </li>
     </ul>
 
@@ -53,13 +53,13 @@
                                 Brad Diesel
                                 <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                             </h3>
-                            <p class="text-sm">Call me whenever you can...</p>
-                            <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                            <p class="text-sm">{{ __('Call me whenever you can...') }}</p>
+                            <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> {{ __('4 Hours Ago') }}</p>
                         </div>
                     </div>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+                <a href="#" class="dropdown-item dropdown-footer">{{ __('See All Messages') }}</a>
             </div>
         </li>
         <!-- Notifications Dropdown Menu -->
@@ -69,14 +69,14 @@
                 <span class="badge badge-warning navbar-badge">15</span>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <span class="dropdown-item dropdown-header">15 Notifications</span>
+                <span class="dropdown-item dropdown-header">{{ __('15 Notifications') }}</span>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item">
-                    <i class="fas fa-envelope mr-2"></i> 4 new messages
-                    <span class="float-right text-muted text-sm">3 mins</span>
+                    <i class="fas fa-envelope mr-2"></i> {{ __('4 new messages') }}
+                    <span class="float-right text-muted text-sm">{{ __('3 mins') }}</span>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                <a href="#" class="dropdown-item dropdown-footer">{{ __('See All Notifications') }}</a>
             </div>
         </li>
         <li class="nav-item">
@@ -91,7 +91,12 @@
                 <i class="fa fa-caret-down"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <span class="dropdown-item dropdown-header">Manage account</span>
+                <span class="dropdown-item dropdown-header">{{ __('Manage account') }}</span>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{ route('logout') }}">
+                    <i class="fas fa-user mr-2"></i>
+                    {{ __('Profile') }}
+                </a>
                 <div class="dropdown-divider"></div>
 
                 <a class="dropdown-item" href="{{ route('logout') }}"

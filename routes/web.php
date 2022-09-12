@@ -32,8 +32,11 @@ Route::resource('categories', CategoryController::class);
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['web', 'auth']], function () {
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
-    Route::post('categories/{id}/restore', [CategoryController::class, 'restore'])->name('categories.restore');
-    Route::delete('categories/{id}/force_delete', [CategoryController::class, 'forceDelete'])->name('categories.force_delete');
-    Route::get('categories/archives', [ArchiveController::class, 'category'])->name('categories.archive');
-    Route::resource('categories', CategoryController::class);
+    // Blog manager routes
+    Route::group(['prefix' => 'blogs', 'as' => 'blogs.'], function () {
+        Route::post('categories/{id}/restore', [CategoryController::class, 'restore'])->name('categories.restore');
+        Route::delete('categories/{id}/force_delete', [CategoryController::class, 'forceDelete'])->name('categories.force_delete');
+        Route::get('categories/archives', [ArchiveController::class, 'category'])->name('categories.archive');
+        Route::resource('categories', CategoryController::class);
+    });
 });
