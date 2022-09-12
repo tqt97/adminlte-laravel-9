@@ -3,5 +3,5 @@
         <b>Version</b> 1.0.0
     </div>
     <strong>Copyright &copy; 2022 <a href="https://github.com/tqt97">Tuantq</a>.</strong>
-    All rights reserved.
+        All rights reserved.
 </footer>

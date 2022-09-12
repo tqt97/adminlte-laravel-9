@@ -111,8 +111,50 @@
                 }, 3000);
             }
         }
-
         createAlert('Success', '', '{{ Session::get('message') }}.', 'success', true, true,
             'pageMessages');
     </script>
+
+    {{-- <script>
+        $(document).ready(function() {
+            @if (Session::has('message'))
+                var type = "{{ Session::get('alert-type', 'info') }}"
+                switch (type) {
+
+                    case 'info':
+                        Toast.fire({
+                            icon: 'info',
+                            title: '{{ Session::get('message') }}'
+                        })
+                        break;
+
+                    case 'success':
+                        Toast.fire({
+                            icon: 'success',
+                            title: '{{ Session::get('message') }}'
+                        })
+                        break;
+
+                    case 'warning':
+                        Toast.fire({
+                            icon: 'warning',
+                            title: '{{ Session::get('message') }}'
+                        })
+                        break;
+                    case 'error':
+                        Toast.fire({
+                            icon: 'error',
+                            title: '{{ Session::get('message') }}'
+                        })
+                        break;
+                    case 'question':
+                        Toast.fire({
+                            icon: 'question',
+                            title: '{{ Session::get('message') }}'
+                        })
+                        break;
+                }
+            @endif
+        });
+    </script> --}}
 @endif

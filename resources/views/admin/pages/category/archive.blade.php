@@ -18,7 +18,7 @@
                 <div class="col-12">
                     <div class="card card-primary card-outline">
                         <div class="card-header">
-                            <h3 class="card-title">Restore and Force delete </h3>
+                            <h3 class="card-title">{{ __('Restore and Force delete') }} </h3>
                         </div>
                         <div class="card-body">
                             @if ($categories->count())
@@ -54,7 +54,7 @@
                                                 <td>{{ $category->deleted_at }}</td>
                                                 <td class="text-center">
                                                     <form id="restore-item-{{ $category->id }}"
-                                                        action="{{ route('admin.categories.restore', $category->id) }}"
+                                                        action="{{ route('admin.blogs.categories.restore', $category->id) }}"
                                                         method="POST" class="d-none">
                                                         @csrf
                                                     </form>
@@ -65,7 +65,7 @@
                                                         <i class="fa fa-undo text-primary"></i>
                                                     </a>
                                                     <form id="force-delete-item-{{ $category->id }}"
-                                                        action="{{ route('admin.categories.force_delete', $category->id) }}"
+                                                        action="{{ route('admin.blogs.categories.force_delete', $category->id) }}"
                                                         method="POST" class="d-none">
                                                         @csrf
                                                         @method('DELETE')

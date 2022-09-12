@@ -6,15 +6,15 @@
             {{ $category->created_at->diffForHumans() }}
             <i class="fa {{ $child_category->getFeature() }} pl-3"></i>
             <i class="fa {{ $child_category->getPublish() }} pl-3"></i>
-            <a href="{{ route('admin.categories.edit', $child_category) }}" class="pl-3">
+            <a href="{{ route('admin.blogs.categories.edit', $child_category) }}" class="pl-3">
                 <i class="fa fa-edit"></i>
             </a>
             <form id="delete-item-{{ $child_category->id }}"
-                action="{{ route('admin.categories.destroy', $child_category) }}" method="POST" class="d-none">
+                action="{{ route('admin.blogs.categories.destroy', $child_category) }}" method="POST" class="d-none">
                 @csrf
                 @method('DELETE')
             </form>
-            <a class="pl-3" href="{{ route('admin.categories.destroy', $child_category) }}"
+            <a class="pl-3" href="{{ route('admin.blogs.categories.destroy', $child_category) }}"
                 onclick="event.preventDefault();
                 if(confirm('Do you want to delete this item {{ $child_category->id }}?')){
                 document.getElementById('delete-item-{{ $child_category->id }}').submit();}">

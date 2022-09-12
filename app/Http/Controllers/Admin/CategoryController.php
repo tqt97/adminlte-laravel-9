@@ -57,7 +57,7 @@ class CategoryController extends Controller
 
         Category::create($data);
 
-        return redirect()->route('admin.categories.index')->with('message', 'Add category successful !');
+        return redirect()->route('admin.blogs.categories.index')->with('message', 'Add category successful !');
     }
 
     public function show(Category $category)
@@ -100,7 +100,7 @@ class CategoryController extends Controller
         ];
         $category->update($data);
 
-        return redirect()->route('admin.categories.index')->with('message', 'Category updated successfully !');
+        return redirect()->route('admin.blogs.categories.index')->with('message', 'Category updated successfully !');
     }
 
     public function destroy(Category $category)
@@ -123,7 +123,7 @@ class CategoryController extends Controller
         if (session('back_url')) {
             return redirect(session('back_url'))->with('message', 'Category restore successful !');
         }
-        return redirect()->route('admin.categories.index')->with('message', 'Category restore successful !');
+        return redirect()->route('admin.blogs.categories.index')->with('message', 'Category restore successful !');
     }
     public function forceDelete($id)
     {
@@ -135,6 +135,6 @@ class CategoryController extends Controller
         if (session('back_url')) {
             return redirect(session('back_url'))->with('message', 'Category force delete successful !');
         }
-        return redirect()->route('admin.categories.index')->with('message', 'Category force delete successful !');
+        return redirect()->route('admin.blogs.categories.index')->with('message', 'Category force delete successful !');
     }
 }

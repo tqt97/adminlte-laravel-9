@@ -13,7 +13,7 @@
                 <div class="col-12">
                     <div class="card card-primary card-outline">
                         <div class="card-header">
-                            <a href="{{ route('admin.categories.create') }}" class="btn btn-primary float-left">
+                            <a href="{{ route('admin.blogs.categories.create') }}" class="btn btn-primary float-left">
                                 <i class="fa fa-plus-circle mr-2"></i> Add new
                             </a>
                         </div>
@@ -33,18 +33,18 @@
                                                         {{ $category->created_at->diffForHumans() }}
                                                         <i class="fa {{ $category->getFeature() }} pl-3"></i>
                                                         <i class="fa {{ $category->getPublish() }} pl-3"></i>
-                                                        <a href="{{ route('admin.categories.edit', $category) }}"
+                                                        <a href="{{ route('admin.blogs.categories.edit', $category) }}"
                                                             class="pl-3">
                                                             <i class="fa fa-edit"></i>
                                                         </a>
                                                         <form id="delete-item-{{ $category->id }}"
-                                                            action="{{ route('admin.categories.destroy', $category) }}"
+                                                            action="{{ route('admin.blogs.categories.destroy', $category) }}"
                                                             method="POST" class="d-none">
                                                             @csrf
                                                             @method('DELETE')
                                                         </form>
                                                         <a class="pl-3"
-                                                            href="{{ route('admin.categories.destroy', $category) }}"
+                                                            href="{{ route('admin.blogs.categories.destroy', $category) }}"
                                                             onclick="event.preventDefault();
                                                             if(confirm('Do you want to delete this item {{ $category->id }}?')){
                                                                 document.getElementById('delete-item-{{ $category->id }}').submit();}">

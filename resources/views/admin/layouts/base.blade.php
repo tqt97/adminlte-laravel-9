@@ -18,7 +18,7 @@
     <meta name="twitter:image:alt" content="learn_laravel_basic">
     <title>
         @if (isset($title))
-            {{ $title }}
+            {{ __($title) }}
         @else
             {{ config('app.name', 'Administrator - Laravel 9') }}
         @endif
