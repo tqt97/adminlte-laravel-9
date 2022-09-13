@@ -289,6 +289,73 @@
                         </li>
                     </ul>
                 </li>
+
+                {{-- Orders --}}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-shopping-basket"></i>
+                        <p>
+                            {{ __('Orders Management') }}
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview" style="display: none;">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-shopping-cart"></i>
+                                <p>
+                                    {{ __('Orders') }}
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fas fa-arrow-right nav-icon"></i>
+                                        <p>{{ __('List all') }}</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fas fa-arrow-right nav-icon"></i>
+                                        <p>{{ __('Completed') }}</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fas fa-arrow-right nav-icon"></i>
+                                        <p>{{ __('Pending') }}</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fas fa-arrow-right nav-icon"></i>
+                                        <p>{{ __('Canceled') }}</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-map"></i>
+                                <p>
+                                    {{ __('Shippip Adresss') }}
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="fas fa-arrow-right nav-icon"></i>
+                                        <p>{{ __('List all') }}</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
                 {{-- Users --}}
                 <li class="nav-item">
                     <a href="#" class="nav-link">

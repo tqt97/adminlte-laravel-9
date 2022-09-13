@@ -25,6 +25,7 @@ class CategoryController extends Controller
             ->with('childrenCategories')
             ->withCount('categories')
             ->withCount('childrenCategories')
+            ->orderBy('order_at', 'DESC')
             ->get();
         Session::put('back_url', url()->full()); // get full back url
         return view('admin.pages.category.index', compact('categories'));
@@ -45,17 +46,17 @@ class CategoryController extends Controller
             $hashName = pathinfo($originalName, PATHINFO_FILENAME) . '-' . time() . '.' . $extension;
             $file->storeAs('category', $hashName, 'public');
         }
-        $data = [
-            'name' => $request->name,
-            'slug' => $request->slug ? $request->slug : Str::slug($request->name),
-            'publish' => $request->publish ? true : false,
-            'feature' => $request->feature ? true : false,
-            'parent_id' => $request->parent_id,
-            'order_at' => $request->order_at,
-            'image' => $hashName
-        ];
+        // $data = [
+        //     'name' => $request->name,
+        //     'slug' => $request->slug ? $request->slug : Str::slug($request->name),
+        //     'publish' => $request->publish ? true : false,
+        //     'feature' => $request->feature ? true : false,
+        //     'parent_id' => $request->parent_id,
+        //     'order_at' => $request->order_at,
+        //     'image' => $hashName
+        // ];
 
-        Category::create($data);
+        Category::create($request->validated() + ['image' => $hashName]);
 
         return redirect()->route('admin.blogs.categories.index')->with('message', 'Add category successful !');
     }
